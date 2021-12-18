@@ -283,7 +283,7 @@ private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     SimpleEQAudioProcessor& audioProcessor;
-    
+
     
     RotarySliderWithLabels peakFreqSlider,
     peakGainSlider,
@@ -305,6 +305,18 @@ private:
                 highCutFreqSliderAttachment,
                 lowCutSlopeSliderAttachment,
                 highCutSlopeSliderAttachment;
+
+    juce::ToggleButton lowcutBypassButton, peakBypassButton, highcutBypassButton, analyzerEnabledButton;
+    
+    //PowerButton lowcutBypassButton, peakBypassButton, highcutBypassButton;
+    //AnalyzerButton analyzerEnabledButton;
+    
+    using ButtonAttachment = APVTS::ButtonAttachment;
+    
+    ButtonAttachment lowcutBypassButtonAttachment,
+                        peakBypassButtonAttachment,
+                        highcutBypassButtonAttachment,
+                        analyzerEnabledButtonAttachment;
     
     std::vector<juce::Component*> getComps();
 
